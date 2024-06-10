@@ -1,6 +1,6 @@
 //Scroll To Sections.
 function scrollToSection1() {
-  var section = document.getElementById("target-section1");
+  let section = document.getElementById("target-section1");
 
   window.scrollTo({
     top: 822,
@@ -8,7 +8,7 @@ function scrollToSection1() {
   });
 }
 function scrollToSection2() {
-  var section = document.getElementById("target-section2");
+  let section = document.getElementById("target-section2");
 
   window.scrollTo({
     top: 2600,
@@ -16,7 +16,7 @@ function scrollToSection2() {
   });
 }
 function scrollToSection3() {
-  var section = document.getElementById("target-section3");
+  let section = document.getElementById("target-section3");
 
   window.scrollTo({
     top: 4000,
@@ -43,13 +43,13 @@ btn.onclick = function () {
 
 //Validated Form.
 function validateForm() {
-  var name = document.forms["myForm"]["name"].value;
-  var email = document.forms["myForm"]["email"].value;
-  var inputName = document.getElementById("input-name");
-  var inputEmail = document.getElementById("input-email");
+  let name = document.forms["myForm"]["name"].value;
+  let email = document.forms["myForm"]["email"].value;
+  let inputName = document.getElementById("input-name");
+  let inputEmail = document.getElementById("input-email");
 
-  var namePattern = /^[A-Za-z\s]+$/gi;
-  var emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/gi;
+  let namePattern = /^[A-Za-z\s]+$/gi;
+  let emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/gi;
 
   if (!name.match(namePattern)) {
     inputName.style.display = "block";
@@ -68,11 +68,19 @@ function validateForm() {
   return true;
 }
 
-var dateControl = document.querySelector('input[type="date"]');
-dateControl.value = "2023-10-01";
+let dateControl = document.querySelector('input[type="date"]');
+const today = new Date();
+const year = today.getFullYear();
+const month = String(today.getMonth() + 1).padStart(2, "0");
+const day = String(today.getDate()).padStart(2, "0");
 
-var timeControl = document.querySelector('input[type="time"]');
-timeControl.value = "10:30";
+dateControl.value = `${year}-${month}-${day}`;
 
-var numControl = document.querySelector('input[type="number"]');
+let timeControl = document.querySelector('input[type="time"]');
+timeControl.value = new Date().toLocaleTimeString(undefined, {
+  hour: "2-digit",
+  minute: "2-digit",
+});
+
+let numControl = document.querySelector('input[type="number"]');
 numControl.value = "1";

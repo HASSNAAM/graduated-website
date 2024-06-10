@@ -29,7 +29,7 @@ body {
   padding: 15px 15px 0 0;
 }
 .banner {
-  background-image: url(./asserts/images/Rectangle.png);
+  background-image: url(../images/Rectangle.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 100% 100%;
@@ -39,9 +39,10 @@ ul li a {
   transition: all 0.3s ease-in-out !important;
   color: var(--h-p-color) !important;
   font-size: 21px !important;
+  border-bottom: 1px solid transparent;
 }
 ul li a:hover {
-  border-bottom: 1px solid var(--button-color);
+  border-color: var(--button-color);
   color: var(--button-color) !important;
 }
 @media (max-width: 991px) {
@@ -73,7 +74,7 @@ ul li a:hover {
 .btn:hover {
   background-color: #fff;
   color: #bf2222;
-  scale: 1.2;
+  scale: 1.1;
 }
 .logo {
   max-width: 150px;
@@ -103,15 +104,15 @@ ul li a:hover {
 }
 /* Page Two */
 .burger1 {
-  background-image: url(./asserts/images/burger1.png);
+  background-image: url(../images/burger1.png);
   height: 52vh;
 }
 .burger2 {
-  background-image: url(./asserts/images/burger2.png);
+  background-image: url(../images/burger2.png);
   height: 25vh;
 }
 .burger3 {
-  background-image: url(./asserts/images/burger3.png);
+  background-image: url(../images/burger3.png);
   height: 25vh;
 }
 .burger1,
@@ -143,7 +144,7 @@ ul li a:hover {
 }
 /* Page Book */
 .book {
-  background-image: url(./asserts/images/contact.png);
+  background-image: url(../images/contact.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 10% 70%;
@@ -153,10 +154,9 @@ ul li a:hover {
 #input-name {
   border: 1px solid var(--button-color);
   border-radius: 10px;
-  padding: 5px;
+  padding: 10px;
   color: var(--button-color);
   margin-top: 10px;
-  width: 350px;
   display: none;
 }
 .submit {
@@ -174,7 +174,7 @@ ul li a:hover {
 }
 /* Footer */
 .footer {
-  background-image: url(./asserts/images/footer.png);
+  background-image: url(../images/footer.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 100% 100%;
